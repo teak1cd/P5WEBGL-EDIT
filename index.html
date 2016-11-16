@@ -17,6 +17,47 @@
     <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
   </head>
   <body>
-    <p>this is a test</p>
+    <div id=raw hidden>
+    <div id=optionsCont style="width:300px;border:1px solid black;">
+      <span id=editorSettings>
+        <select id=editorSafe value=0>
+          <option value=0>Safe Editor</option>
+          <option value=1>Unsave Editor</option>
+        </select>
+        <hr/>
+      </span>
+      <span id=addObjects>
+        <input type=text placeholder="Object">
+        <button onClick="addObject();">+</button>
+        <hr/>
+        position:
+        <div id=posCont>
+          x:<input id=newposx type=number value=0 style="width:50px">
+          y:<input id=newposy type=number value=0 style="width:50px">
+          z:<input id=newposz type=number value=0 style="width:50px">
+        </div>
+        size:
+        <div id=sizeCont>
+          x:<input id=newsizex type=number value=1 style="width:50px">
+          y:<input id=newsizey type=number value=1 style="width:50px">
+          z:<input id=newsizez type=number value=1 style="width:50px">
+        </div>
+        Texture Selector
+        <div id=textureSelector style="width:100%;height:50px;border:1px groove black;border-style:groove;background-color:gray;">
+          
+        </div>
+        Objects
+        <div id=objects style="width:100%;background-color:gray;">
+          <span class="object" style="width:100%;height:10px;background-color:rgb(200,200,200);">
+            <span class="object_name">BOX</span>
+            <button class="removeObj" onClick="removeOBJ(0);">X</button>
+            <button class="editObj" onClick="editOBJ(0);">Edit</button>
+          </span>
+        </div>
+      </span>
+      <hr/>
+      <textarea style="width:98%;height:100%;resize: vertical;" placeholder="level Code" readonly resizable="false"></textarea>
+    </div>
+  </div>
   </body>
 </html>
