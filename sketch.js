@@ -44,7 +44,7 @@ function draw() {
   rotateY(rotation.y);
   rotateZ(rotation.z);
   for(var i = 0;i<objects.length;i++){
-      texture(imag[objects[i].texture])
+      texture(imag[engine.objects[i].texture])
       engine.objects[i].show();
   }
 }
