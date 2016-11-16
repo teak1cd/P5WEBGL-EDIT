@@ -24,7 +24,7 @@ function addObject(){
   tempOBJ.inputs[6] = 0;
   if(tempOBJ.type==="Line")tempOBJ.inputs[6] = document.getElementsByTagName("input")[7].value;
   levelJSON.objects.push(tempOBJ);
-  var frame = document.getElementByTagName("iframe")[0].contentWindow;
+  var frame = document.getElementsByTagName("iframe")[0].contentWindow;
   frame.engine.objects = frame.level.getData(levelJSON)[0];
   frame.engine.textures = frame.level.getData(levelJSON)[1];
 }
