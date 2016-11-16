@@ -10,6 +10,8 @@ var sceneData;
 var engine = {};
 function setup() {
   createCanvas(innerWidth, innerHeight, WEBGL);
+  document.body.innerHTML+=document.getElementById("raw").innerHTML;
+  document.getElementById("raw").innerHTML = "";
   mousePY = mouseY;
   mousePX = mouseX;
   level = new level();
