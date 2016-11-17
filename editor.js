@@ -27,11 +27,18 @@ function addObject(){
   var frame = document.getElementsByTagName("iframe")[0].contentWindow;
   frame.engine.objects = frame.level.getData(levelJSON)[0];
   frame.engine.textures = frame.level.getData(levelJSON)[1];
+  rebuildLevelData();
 }
 function addTexture(){
   var ts = document.getElementById("textureSelector");
-  ts.innerHTML+='<button onClick="texture('+ts.innerHTML.split("onClick").length-1+');"><img src="'+imgsrc+'"></img></button>';
+  var imgsrc = document.getElementById("textureURL").value;
+  ts.innerHTML+='<button onClick="texture('+ts.innerHTML.split("onClick").length-1+');"><img src="'+imgsrc+'" width=100 height=100 ></img></button>';
+  levelJSON.textures.push();
 }
 function texture(n){
 alert(n);
 }
+
+function rebuildLevelData(){
+document.getElementsByTagName("textarea")[0].value = JSON.stringify(levelJSON);
+};
