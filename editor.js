@@ -4,7 +4,7 @@ var levelJSON = {
 };
 function removeOBJ(n){
   levelJSON.objects.splice(n,1);
-  document.getElementById("objects").removeChild((document.getElementsByClassName("object")[n]);
+  document.getElementById("objects").removeChild(document.getElementsByClassName("object")[n]);
 }
 
 function editOBJ(n){
