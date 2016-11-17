@@ -28,3 +28,10 @@ function addObject(){
   frame.engine.objects = frame.level.getData(levelJSON)[0];
   frame.engine.textures = frame.level.getData(levelJSON)[1];
 }
+function addTexture(){
+  var ts = document.getElementById("textureSelector");
+  ts.innerHTML+='<button onClick="texture('+ts.innerHTML.split("onClick").length-1+');"><img src="'+imgsrc+'"></img></button>';
+}
+function texture(n){
+alert(n);
+}
