@@ -28,6 +28,8 @@ function addObject(){
   var frame = document.getElementById("iframe").contentWindow;
   frame.engine.objects = frame.level.getData(levelJSON)[0];
   frame.engine.textures = frame.level.getData(levelJSON)[1];
+  frame.engine.useExternalLevel = true;
+  frame.externalData = levelJSON;
   rebuildLevelData();
   document.getElementById("objects").innerHTML+='<span class="object" style="width:100%;height:10px;background-color:rgb(200,200,200);"><span class="object_name">%name%</span><button class="removeObj" onClick="removeOBJ(%n%);">X</button><button class="editObj" onClick="editOBJ(%n%);">Edit</button></span>'.replace(/%name%/gm,tempOBJ.type).replace(/%n%/gm,levelJSON.objects.length-1);
 }
@@ -43,6 +45,7 @@ alert(n);
 
 function rebuildLevelData(){
 document.getElementsByTagName("textarea")[0].value = JSON.stringify(levelJSON);
+return levelJSON;
 };
 
 function restartSimulation(){
