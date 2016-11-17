@@ -44,3 +44,8 @@ alert(n);
 function rebuildLevelData(){
 document.getElementsByTagName("textarea")[0].value = JSON.stringify(levelJSON);
 };
+
+function restartSimulation(){
+  var frame = document.getElementById("iframe").contentWindow
+  frame.setup();
+}
