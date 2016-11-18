@@ -2,6 +2,12 @@ var levelJSON = {
   "textures":[],
   "objects":[]
 };
+
+function toggleImageWindow(){
+var t = document.getElementById("imageDisplay");
+t.hidden = !t.hidden;
+}
+
 function removeOBJ(n){
   levelJSON.objects.splice(n,1);
   document.getElementById("objects").removeChild(document.getElementsByClassName("object")[n]);
