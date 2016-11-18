@@ -20,6 +20,17 @@
   </head>
   <body style="width:100%;height:100%;">
   <div id=imageDisplay class="id">
+    <div id=toolbar style="width:100%;height:10%;text-align:right;border-bottom:1px solid black;">
+      <button onClick="toggleImageWindow();">X</button>
+    </div>
+    <div style="width:100%;height:80%;text-align:center;">
+      <img id=imgdisplay>There is an error</img>
+    </div>
+    <div style="width:100%;height:10%;text-align:center;border-top:1px solid black;">
+      <button onClick="setImageAsTexture();">use Image</button>
+      <button onClick="removeImgFromLib();">remove</button>
+    </div>
+  </div>
     <table style="width:100%;height:100%;">
       <tr style="height:100%;">
         <th>
